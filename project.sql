@@ -71,20 +71,20 @@ CREATE TABLE `finezone` (
 -- Table structure for table `issue_book`
 --
 
-CREATE TABLE `issue_book` (
-  `id` int(10) NOT NULL,
-  `utype` varchar(10) NOT NULL,
-  `regno` varchar(20) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `sem` varchar(10) NOT NULL,
-  `dept` varchar(10) NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `email` varchar(20) NOT NULL,
-  `booksname` varchar(50) NOT NULL,
-  `booksissuedate` varchar(10) NOT NULL,
-  `booksreturndate` varchar(10) NOT NULL,
-  `username` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  CREATE TABLE `issue_book` (
+    `id` int(10) NOT NULL,
+    `utype` varchar(10) NOT NULL,
+    `regno` varchar(20) NOT NULL,
+    `name` varchar(50) NOT NULL,
+    `sem` varchar(10) NOT NULL,
+    `dept` varchar(10) NOT NULL,
+    `phone` varchar(20) NOT NULL,
+    `email` varchar(20) NOT NULL,
+    `booksname` varchar(50) NOT NULL,
+    `booksissuedate` varchar(10) NOT NULL,
+    `booksreturndate` varchar(10) NOT NULL,
+    `username` varchar(20) NOT NULL
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
