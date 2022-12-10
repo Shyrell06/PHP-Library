@@ -51,7 +51,7 @@
                                 </thead>
                                 <tbody>
                                    <?php
-                                        $res= mysqli_query($link, "select * from std_registration");
+                                        $res= mysqli_query($link, "select * from std_registrations");
                                         while ($row=mysqli_fetch_array($res)) {
                                             echo "<tr>";
                                             echo "<td>"; echo $row["regno"]; echo "</td>";

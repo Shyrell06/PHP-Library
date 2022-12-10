@@ -1,10 +1,13 @@
 <?php
     session_start();
+    
     if (!isset($_SESSION["username"])) {
         ?>
             <script type="text/javascript">
                 window.location="login.php";
             </script>
+
+            
         <?php
     }
     include 'inc/header.php';
@@ -107,6 +110,8 @@ include 'inc/function.php';
                             <div class="submit">
                                 <input type="submit" value="Add Student" name="submit" class="btn change text-center">
                             </div>
+
+                            
                         </form>
 
 					</div>

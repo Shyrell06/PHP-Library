@@ -21,10 +21,10 @@
 //             $error_msg = "<div class='alert alert-danger'><strong>Error ! </strong>username Must be contain numerical alphabet, dashes, number and Underscore</div>";
 //            }
 		
-		$sql_u= mysqli_query($link,"select * from std_registration where username= '$username'");
-		$sql_e= mysqli_query($link,"select * from std_registration where email= '$email'");
-		$sql_p= mysqli_query($link,"select * from std_registration where phone= '$phone'");
-		$sql_r= mysqli_query($link,"select * from std_registration where regno= '$regno'");
+		$sql_u= mysqli_query($link,"select * from std_registrations where username= '$username'");
+		$sql_e= mysqli_query($link,"select * from std_registrations where email= '$email'");
+		$sql_p= mysqli_query($link,"select * from std_registrations where phone= '$phone'");
+		$sql_r= mysqli_query($link,"select * from std_registrations where regno= '$regno'");
         
         
 		$sql2_u= mysqli_query($link,"select * from t_registration where username= '$username'");
@@ -52,7 +52,7 @@
 				$e_msg = "<div class='alert alert-danger'><strong>Error ! </strong>Email Address Not Valid</div>";
 			} else{
 		    $vkey = md5(time().$username);
-		    $insert = mysqli_query($link, "insert into std_registration values('','$name','$username','$password','$email','$phone','$sem','$dept','$regno','$address','$utype','$photo')");
+		    $insert = mysqli_query($link, "insert into std_registrations values('$name','$username','$password','$email','$phone','$sem','$dept','$regno','$address','$utype','$photo')");
             if($insert){
                 $to = "$email";
                 $subject = "Email Verification";
