@@ -27,7 +27,7 @@
 				<div class="profile">
 					<div class="profile-pic">
                         <?php
-                            $res = mysqli_query($link, "select * from lib_registration where username='".$_SESSION['username']."'");
+                            $res = mysqli_query($link, "select * from lib_registrations where username='".$_SESSION['username']."'");
                             while ($row = mysqli_fetch_array($res)){
                                 ?><img src="<?php echo $row["photo"]; ?> " height="" width="" alt="something wrong" class="rounded-circle"></a> <?php
                             }
@@ -37,7 +37,7 @@
 						<span>Welcome!</span>
 						<h2>
               <?php 
-                $res = mysqli_query($link, "select * from lib_registration where username='".$_SESSION['username']."'");
+                $res = mysqli_query($link, "select * from lib_registrations where username='".$_SESSION['username']."'");
                 while ($row = mysqli_fetch_array($res)){
                   $name  =  $row["name"];
                   echo $name;
@@ -116,7 +116,7 @@
                             </li>
 							<li class="dropdown">
                                 <?php
-                                     $res = mysqli_query($link, "select * from lib_registration where username='".$_SESSION['username']."'");
+                                     $res = mysqli_query($link, "select * from lib_registrations where username='".$_SESSION['username']."'");
                                      while ($row = mysqli_fetch_array($res)){
                                          ?><a href="" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $row["photo"]; ?>" alt=""><span><?php echo $_SESSION["username"]; ?></span></a> <?php
                                      }
@@ -124,7 +124,7 @@
 								<ul class="dropdown-menu">
 									<li class="user-header text-center">
 										<?php
-                                        $res = mysqli_query($link, "select * from lib_registration where username='".$_SESSION['username']."'");
+                                        $res = mysqli_query($link, "select * from lib_registrations where username='".$_SESSION['username']."'");
                                         while ($row = mysqli_fetch_array($res)){
                                             ?><img src="<?php echo $row["photo"]; ?>" alt=""> <?php
                                         }

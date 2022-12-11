@@ -4,5 +4,5 @@
 
  ?>
  <script type="text/javascript">
- 	window.location="login.php";
+ 	window.location="index.php";
  </script>

@@ -55,7 +55,7 @@
                 <?php
                 if (isset($_POST["login"])) {
                     $count=0;
-                    $res= mysqli_query($link, "select * from lib_registration where username='$_POST[username]' && password= '$_POST[password]' ");
+                    $res= mysqli_query($link, "select * from lib_registrations where username='$_POST[username]' && password=md5('$_POST[password]') ");
                     $count = mysqli_num_rows($res);
                     if ($count==0) {
                         ?>

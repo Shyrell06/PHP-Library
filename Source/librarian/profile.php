@@ -33,7 +33,7 @@
 						<div class="col-md-3">
 							<div class="photo">
 								<?php
-                                    $res = mysqli_query($link, "select * from lib_registration where username='".$_SESSION['username']."'");
+                                    $res = mysqli_query($link, "select * from lib_registrations where username='".$_SESSION['username']."'");
                                     while ($row = mysqli_fetch_array($res)){
                                         ?><img src="<?php echo $row["photo"]; ?> " height="" width="" alt="something wrong"></a> <?php
                                     }
@@ -54,7 +54,7 @@
                                     $newfilename = round(microtime(true)) . '.' . end($temp);
                                     $imagepath="upload/".$newfilename;
                                     move_uploaded_file($_FILES["image"]["tmp_name"],$imagepath);
-                                    mysqli_query($link, "update lib_registration set photo='".$imagepath."' where username='".$_SESSION['username']."'");
+                                    mysqli_query($link, "update lib_registrations set photo='".$imagepath."' where username='".$_SESSION['username']."'");
                                     
                                     ?>
                                         <script type="text/javascript">
@@ -67,7 +67,7 @@
 						<div class="col-md-7 ml-30">
 							<div class="details">
 								<?php
-                                   $res5 = mysqli_query($link, "select * from lib_registration where username='$_SESSION[username]' ");
+                                   $res5 = mysqli_query($link, "select * from lib_registrations where username='$_SESSION[username]' ");
                                    while($row5 = mysqli_fetch_array($res5)){
                                        $name      = $row5['name'];
                                        $username  = $row5['username'];
@@ -107,7 +107,7 @@
 			                </div> 
                             <?php
                                if (isset($_POST["update"])){
-                                   mysqli_query($link, "update lib_registration set 
+                                   mysqli_query($link, "update lib_registrations set 
                                    name='$_POST[name]',
                                    phone='$_POST[phone]',
                                    address='$_POST[address]' 
