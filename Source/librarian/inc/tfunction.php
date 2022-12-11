@@ -44,7 +44,7 @@
 				
         }else{
             $vkey = md5(time().$username);
-            $insert = mysqli_query($link, "insert into t_registration values('','$name','$username','$password','$lecturer','$email','$phone','$idno','$address','$utype','$photo')");
+            $insert = mysqli_query($link, "insert into t_registration values('','$name','$username','$password','$lecturer','$email','$phone','$idno','$address','$utype','$photo','','')");
             if($insert){
                 $to = "$email";
                 $subject = "Email Verification";
