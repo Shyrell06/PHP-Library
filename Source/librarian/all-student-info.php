@@ -54,14 +54,14 @@
                                         $res= mysqli_query($link, "select * from std_registrations");
                                         while ($row=mysqli_fetch_array($res)) {
                                             echo "<tr>";
-                                            echo "<td>"; echo $row["regno"]; echo "</td>";
-                                            echo "<td>"; echo $row["name"]; echo "</td>";
-                                            echo "<td>"; echo $row["username"]; echo "</td>";
-                                            echo "<td>"; echo $row["sem"]; echo "</td>";
-                                            echo "<td>"; echo $row["dept"]; echo "</td>";
-                                            echo "<td>"; echo $row["email"]; echo "</td>";
-                                            echo "<td>"; echo $row["phone"]; echo "</td>";
-                                            echo "<td>"; echo $row["address"]; echo "</td>";
+                                                echo "<td>"; echo $row["regno"]; echo "</td>";
+                                                echo "<td>"; echo $row["name"]; echo "</td>";
+                                                echo "<td>"; echo $row["username"]; echo "</td>";
+                                                echo "<td>"; echo $row["sem"]; echo "</td>";
+                                                echo "<td>"; echo $row["dept"]; echo "</td>";
+                                                echo "<td>"; echo $row["email"]; echo "</td>";
+                                                echo "<td>"; echo $row["phone"]; echo "</td>";
+                                                echo "<td>"; echo $row["address"]; echo "</td>";
                                             echo "</tr>";
                                         }
                                    ?> 
