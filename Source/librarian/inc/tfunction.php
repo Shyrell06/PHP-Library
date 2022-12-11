@@ -13,9 +13,9 @@
 		}
 		$photo = "upload/avatar.jpg";
 		$utype = "teacher";
-		$sql_u= mysqli_query($link,"select * from std_registration where username= '$username'");
-		$sql_e= mysqli_query($link,"select * from std_registration where email= '$email'");
-		$sql_p= mysqli_query($link,"select * from std_registration where phone= '$phone'");
+		$sql_u= mysqli_query($link,"select * from std_registrations where username= '$username'");
+		$sql_e= mysqli_query($link,"select * from std_registrations where email= '$email'");
+		$sql_p= mysqli_query($link,"select * from std_registrations where phone= '$phone'");
 		$sql_r= mysqli_query($link,"select * from t_registration where idno= '$idno'");
         
         
