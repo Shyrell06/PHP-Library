@@ -38,7 +38,7 @@
 											<td class="">
 												<select name="reg" id="" class="form-control">
 													 <?php 
-                                                        $res= mysqli_query($link, "select regno from std_registration");
+                                                        $res= mysqli_query($link, "select regno from std_registrations");
                                                         while($row=mysqli_fetch_array($res)){
                                                             echo "<option>";
                                                             echo $row["regno"];
@@ -54,7 +54,7 @@
 									</table>
                                     <?php 
                                     if (isset($_POST["submit1"])) {
-                                       $res5 = mysqli_query($link, "select * from std_registration where regno='$_POST[reg]' ");
+                                       $res5 = mysqli_query($link, "select * from std_registrations where regno='$_POST[reg]' ");
                                        while($row5 = mysqli_fetch_array($res5)){
                                            $name      = $row5['name'];                    
 										   $username  = $row5['username'];

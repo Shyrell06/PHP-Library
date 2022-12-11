@@ -91,7 +91,7 @@
                 $newfilename = round(microtime(true)) . '.' . end($temp);
                 $imagepath="books-image/".$newfilename;
                 move_uploaded_file($_FILES["f1"]["tmp_name"],$imagepath);
-                mysqli_query($link,"insert into add_book values('','$_POST[booksname]','$imagepath','$_POST[bauthorname]','$_POST[bpubname]','$_POST[bpurcdate]','$_POST[bprice]','$_POST[bquantity]','$_POST[bavailability]','$_SESSION[username]')");
+                mysqli_query($link,"insert into add_book values('','$_POST[booksname]','$imagepath','$_POST[bauthorname]','$_POST[bpubname]','$_POST[bpurcdate]','$_POST[bprice]','$_POST[bquantity]','$_POST[bavailability]','$_SESSION[username]','','')");
             }
         ?>
 			

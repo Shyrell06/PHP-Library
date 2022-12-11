@@ -39,7 +39,7 @@
 								if ($title == "" | $msg =="" ) {
 									echo "<span style='color: red;'><b>Error !</b> Feild mustn't be empty</span>";
 								}else{
-									$sql = mysqli_query($link, "insert into message values('','$_SESSION[username]','$_POST[rusername]','$_POST[title]','$_POST[msg]','n','$time') ");
+									$sql = mysqli_query($link, "insert into message values('','$_SESSION[username]','$_POST[rusername]','$_POST[title]','$_POST[msg]','n','$time','','') ");
 									echo "<span style='color: green; margin-bottom: 10px;'><b>Success !</b>Message send successfully</span>";
 									if(!$sql){
 										echo "<span style='color: red; margin-bottom: 10px;'><b>Warning !</b>Message can't be sent</span>";	
@@ -51,7 +51,7 @@
                                 <td>
                                   <select name="rusername" class="form-control">
 	                                     <?php 
-                                             $res= mysqli_query($link, "select * from std_registration");
+                                             $res= mysqli_query($link, "select * from std_registrations");
                                                 
                                                 while($row=mysqli_fetch_array($res)){
                                                     ?><option value="<?php echo $row["username"]?>">
