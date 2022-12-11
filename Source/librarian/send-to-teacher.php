@@ -52,7 +52,7 @@
                                 <td>
                                    <select name="rusername" class="form-control">
 	                                     <?php 
-                                             $res= mysqli_query($link, "select * from t_registration");
+                                             $res= mysqli_query($link, "select * from t_registrations");
                                                 
                                                 while($row=mysqli_fetch_array($res)){
                                                     ?><option value="<?php echo $row["username"]?>">

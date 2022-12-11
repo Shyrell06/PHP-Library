@@ -27,9 +27,9 @@
 		$sql_r= mysqli_query($link,"select * from std_registrations where regno= '$regno'");
         
         
-		$sql2_u= mysqli_query($link,"select * from t_registration where username= '$username'");
-        $sql2_e= mysqli_query($link,"select * from t_registration where email= '$email'");
-        $sql2_p= mysqli_query($link,"select * from t_registration where phone= '$phone'");
+		$sql2_u= mysqli_query($link,"select * from t_registrations where username= '$username'");
+        $sql2_e= mysqli_query($link,"select * from t_registrations where email= '$email'");
+        $sql2_p= mysqli_query($link,"select * from t_registrations where phone= '$phone'");
 		if(mysqli_num_rows($sql_u) > 0){
 			$error_uname = "Username already exist";
 		}

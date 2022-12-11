@@ -16,12 +16,12 @@
 		$sql_u= mysqli_query($link,"select * from std_registrations where username= '$username'");
 		$sql_e= mysqli_query($link,"select * from std_registrations where email= '$email'");
 		$sql_p= mysqli_query($link,"select * from std_registrations where phone= '$phone'");
-		$sql_r= mysqli_query($link,"select * from t_registration where idno= '$idno'");
+		$sql_r= mysqli_query($link,"select * from t_registrations where idno= '$idno'");
         
         
-		$sql2_u= mysqli_query($link,"select * from t_registration where username= '$username'");
-        $sql2_e= mysqli_query($link,"select * from t_registration where email= '$email'");
-        $sql2_p= mysqli_query($link,"select * from t_registration where phone= '$phone'");
+		$sql2_u= mysqli_query($link,"select * from t_registrations where username= '$username'");
+        $sql2_e= mysqli_query($link,"select * from t_registrations where email= '$email'");
+        $sql2_p= mysqli_query($link,"select * from t_registrations where phone= '$phone'");
 		if(mysqli_num_rows($sql_u) > 0){
 			$error_uname = "Username already exist";
 		}
@@ -44,7 +44,7 @@
 				
         }else{
             $vkey = md5(time().$username);
-            $insert = mysqli_query($link, "insert into t_registration values('','$name','$username','$password','$lecturer','$email','$phone','$idno','$address','$utype','$photo','','')");
+            $insert = mysqli_query($link, "insert into t_registrations values('','$name','$username','$password','$lecturer','$email','$phone','$idno','$address','$utype','$photo','','')");
             if($insert){
                 $to = "$email";
                 $subject = "Email Verification";
