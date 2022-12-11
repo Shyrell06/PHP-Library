@@ -37,8 +37,8 @@
 							<div class="text">
 								<h3><span class="counter">
                                     <?php
-                                         $res = mysqli_query($link, "select * from std_registration");
-                                         $res2 = mysqli_query($link, "select * from t_registration");
+                                         $res = mysqli_query($link, "select * from std_registrations");
+                                         $res2 = mysqli_query($link, "select * from t_registrations");
                                          $count2 = mysqli_num_rows($res2);
                                          $count = mysqli_num_rows($res);
                                          $result = $count + $count2;
