@@ -104,6 +104,18 @@ CREATE TABLE `lib_registration` (
   `status` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `lib_registrations` (
+  `id` int(2) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `photo` varchar(500) NOT NULL,
+  `status` varchar(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Dumping data for table `lib_registration`
 --
@@ -184,7 +196,22 @@ CREATE TABLE `std_registration` (
   `regno` varchar(20) NOT NULL,
   `address` varchar(100) NOT NULL,
   `utype` varchar(7) NOT NULL,
-  `photo` varchar(500) NOT NULL
+  `photo` varchar(500) NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `std_registrations` (
+  `id` int(10) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `sem` varchar(10) NOT NULL,
+  `dept` varchar(10) NOT NULL,
+  `regno` varchar(20) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `utype` varchar(7) NOT NULL,
+  `photo` varchar(500) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
